@@ -1,18 +1,18 @@
-#encode utf-8
+#encode utfx-8
 
 import numpy as np
 
 #Classificador Perceptron
 class Perceptron(object):
-    #Hiperparâmetro
+    #Hiperparametro
     alpha = 0.0
     nIter = 0
     
-    #Parâmetros
+    #Parametros
     _w      = []
     _erros  = []
     
-    #Métodos
+    #Metodos
     
     '''Construtor'''
     def __init__(self, alpha = 0.01, nIter = 10):
@@ -40,7 +40,7 @@ class Perceptron(object):
     def _calcZ(self, X):
         return np.dot(X, self._w[1:]) + self._w[0]
     
-    '''Classifica (calcula saída do classificador)'''
+    '''Classifica (calcula saida do classificador)'''
     def classifica(self, X):
         return np.where(self._calcZ(X) >= 0, 1, -1)
         
